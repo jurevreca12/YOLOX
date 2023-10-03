@@ -4,6 +4,11 @@
 # user experiments directory
 YOLOX_outputs/
 datasets/
+artifacts/
+test-images/
+wandb/
+dvclive/
+
 # do not ignore datasets under yolox/data
 !*yolox/data/datasets/
 
