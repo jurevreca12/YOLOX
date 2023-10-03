@@ -12,4 +12,5 @@ class Exp(MyExp):
         super(Exp, self).__init__()
         self.depth = 1.0
         self.width = 1.0
+        self.data_num_workers = 4
         self.exp_name = os.path.split(os.path.realpath(__file__))[1].split(".")[0]

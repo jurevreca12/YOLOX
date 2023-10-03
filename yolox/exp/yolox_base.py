@@ -210,7 +210,7 @@ class Exp(BaseExp):
             mosaic=not no_aug,
         )
 
-        dataloader_kwargs = {"num_workers": self.data_num_workers, "pin_memory": True}
+        dataloader_kwargs = {"num_workers": self.data_num_workers, "pin_memory": False}
         dataloader_kwargs["batch_sampler"] = batch_sampler
 
         # Make sure each process has different random seed, especially for 'fork' method.
