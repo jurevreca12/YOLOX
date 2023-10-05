@@ -67,7 +67,6 @@ class Exp(MyExp):
         logger.info("GPU MEMORY AVAILABLE: " + str(torch.cuda.mem_get_info()))
 
         # --------------- dataset path config ----------------- #
-        self.data_dir = 'datasets/DAIS-COCO'
         self.train_ann = 'instances_train.json'
         self.val_ann = 'instances_valid.json'
 
