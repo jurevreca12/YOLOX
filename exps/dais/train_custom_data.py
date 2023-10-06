@@ -16,7 +16,6 @@ import random
 
 # from .base_exp import BaseExp
 
-from dvclive import Live
 # import wandb 
 
 # wandb.init()
@@ -75,24 +74,6 @@ class Exp(MyExp):
         self.float_ckpt = None
         self.calib_dir = 'quantize_result'
         self.thresh_lr_scale = 10
-
-        # --------------- Tracking experiments with DVC ----------------- #
-        with Live(save_dvc_exp=True) as live:
-            live.log_param("depth", self.depth)
-            live.log_param("width", self.width)
-            live.log_param("num_classes", self.num_classes)
-            live.log_param("max_epoch", self.max_epoch)
-            live.log_param("data_num_workers", self.data_num_workers)
-            live.log_param("input_size ", self.input_size )
-            live.log_param("random_size", self.random_size)
-            live.log_param("mosaic_scale", self.mosaic_scale)
-            live.log_param("test_size", self.test_size)
-            live.log_param("mosaic_prob", self.mosaic_prob)
-            live.log_param("enable_mixup", self.enable_mixup)
-            live.log_param("eval_interval", self.eval_interval)
-            live.log_param("basic_lr_per_img", self.basic_lr_per_img)
-            live.log_param("thresh_lr_scale", self.thresh_lr_scale)
-            live.log_param("activation_function", self.act)
 
 
     def get_model(self, sublinear=False):
